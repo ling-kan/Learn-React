@@ -1,0 +1,19 @@
+body{
+    background-color: #d3d3d3;
+}
+.todo-list{
+    background-color:white;
+    margin:auto;
+    width:50%;
+    align-items:center;
+    padding:30px;
+}
+.todo-item{
+    align-items: center;
+    padding: 30px;
+    width: 70%
+
+}
+input[type=checkbox]{
+    margin-right:10px;
+}
