@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DateTime() {
+function dateTime() {
 
   const date = new Date()
   const hours = date.getHours()
@@ -14,8 +14,8 @@ function DateTime() {
     timeofDay = "night"
   }
     return (
-      <h1>Good {timeofDay}!</h1>
+      <h1 align="center">Good {timeofDay}!</h1>
      
     )
 }
-export default DateTime
+export default dateTime

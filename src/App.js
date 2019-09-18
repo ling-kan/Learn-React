@@ -2,31 +2,18 @@
 import React, {Component} from "react" //conditional - can only use one type of react
 import ReactDOM from 'react-dom';
 
-import Form from "./components/Form"
+
 import logo from './logo.svg';
 import './App.css';
 import './style.css'; //todo
+
+import Form from "./components/Form"
 import TodoItem from './components/todoItem'; //todo
 import todoData from './components/todoData'; //todo
-import DateTime from './components/DateTime'; //todo
-
+import DateTime from './components/dateTime'; //todo
 import Conditional from './components/Conditional';
-
-
-//   render(){
-//     //add loading before return 
-//     const textName = this.state.loading ? "loading..." : this.state.character.name
-//     const textBirth = this.state.loading ? "loading..." : this.state.character.birth_year
-  
-//     return(
-//       <div>
-
-//         <p> Name: {textName} </p>
-//         <p> Birth: {textBirth} </p>
-//       </div> 
-//     )
-//   }
-// }
+import fetchingDataAPI from "./components/fetchingDataAPI";
+import counterButton from "./components/counterButton";
 
 // To Do list App
 // function App() {
@@ -181,37 +168,17 @@ import Conditional from './components/Conditional';
 // }
 
 
-//Fetching data from an API 
-// class App extends Component{
-//   constructor(){
-//     super()
-//     this.state = {
-//       loading: false,
-//       character: {}
-//     }
-//   }
-
-//   componentDidMount(){
-//     this.setState({loading:true})
-//     fetch("https://swapi.co/api/people/1")
-//         .then(response => response.json())
-//         .then(data => { 
-//           this.setState({
-//           character : data,
-//           loading: false
-//         })
-//       })
-//    }
-
   
 //Forms - Container/Componenent Architecture 
 function App(){
 
   return(
     <div>
-   <DateTime/>
-       
-<Form/>
+ 
+    <DateTime/>        
+    <Form/>
+    <fetchingDataAPI/>
+    <counterButton/>
    {/* {this.state.isLoading ?
         <h1>Loading </h1> :
    <Form/> } */}
