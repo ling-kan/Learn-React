@@ -16,15 +16,20 @@ class Form extends Component {
       destination: "",
       isVegan: false, 
       isKosher: false,
-      isLactoseFree: false
-      
+      isLactoseFree: false,
+      isLoading: true
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
   
-
-      
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        isLoading: false
+      })
+    }, 1500)
+  }  
   handleChange(event){
     const {name, value, type,checked} = event.target
    // this.setState({
@@ -46,6 +51,7 @@ class Form extends Component {
   }
  render(){
      return(
+       
      <FormComponent
         handleChange={this.handleChange}
         data={this.state}/> 

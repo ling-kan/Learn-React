@@ -3,6 +3,7 @@ import React from "react"
 function FormComponent(props){
 
     return (
+      
       <form className="form">
       <h2> Form </h2>
         <input type="text" value={props.data.firstName} name="firstName" placeholder="First Name" onChange={props.handleChange}/>
@@ -73,6 +74,8 @@ function FormComponent(props){
             checked={props.data.isLactoseFree}
             />Lactose Free
       </label>
+       {props.isLoading === true ? <h1>Loading</h1> :
+
       <div className="formText">
       <p>My Name:{props.data.firstName} {props.data.lastName}</p>
       <p>Age: {props.data.age}</p>
@@ -84,7 +87,7 @@ function FormComponent(props){
       &nbsp;&nbsp;&nbsp;&nbsp; Lactose Free: {props.data.isLactoseFree ? "Yes" : "No"}<br/>
          </p>
          </div> 
-
+       }
       </form>
     )
   }

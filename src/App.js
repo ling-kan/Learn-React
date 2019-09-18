@@ -2,15 +2,15 @@
 import React, {Component} from "react" //conditional - can only use one type of react
 import ReactDOM from 'react-dom';
 
-import Form from "./Form"
+import Form from "./components/Form"
 import logo from './logo.svg';
 import './App.css';
 import './style.css'; //todo
-import TodoItem from './todoItem'; //todo
-import todoData from './todoData'; //todo
-import DateTime from './DateTime'; //todo
+import TodoItem from './components/todoItem'; //todo
+import todoData from './components/todoData'; //todo
+import DateTime from './components/DateTime'; //todo
 
-import Conditional from './Conditional';
+import Conditional from './components/Conditional';
 
 
 //   render(){
@@ -120,56 +120,6 @@ import Conditional from './Conditional';
 //   }
 // }
 
-// Date and Time App
-// function App() {
-//   const date = new Date()
-//   const hours = date.getHours()
-//   let timeofDay
-
-//   if (hours < 12){
-//     timeofDay = "morning"
-//   }else if (hours >= 12 && hours < 17){
-//     timeofDay = "afternoon"
-//   }else {
-//     timeofDay = "night"
-//   }
-
-//   return (
-
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <h1> Hello World!</h1>
-//         <h1>Good {timeofDay}</h1>
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//         <div>
-//           <input type="checkbox"/>
-//           <p> Placeholder text</p>
-
-//           <input type="checkbox"/>
-//           <p> Placeholder text</p>
-
-//           <input type="checkbox"/>
-//           <p> Placeholder text</p>
-
-//         </div>
-//       </header>
-//     </div>
-//   );
-// }
-
-
-
 // Counter 
 // class App extends React.Component{
 //     constructor(){
@@ -219,7 +169,7 @@ import Conditional from './Conditional';
 //   }
 
 //   render() {
-//     //<Conditional isLoading={this.state.isLoading}/> ..inside the div 
+//     <Conditional isLoading={this.state.isLoading}/> ..inside the div 
 //     return ( 
 //       <div>
 //         {this.state.isLoading ?
@@ -260,7 +210,11 @@ function App(){
   return(
     <div>
    <DateTime/>
-   <Form/> 
+       
+<Form/>
+   {/* {this.state.isLoading ?
+        <h1>Loading </h1> :
+   <Form/> } */}
    </div>
   )
 }
