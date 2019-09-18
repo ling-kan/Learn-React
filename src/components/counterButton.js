@@ -16,12 +16,11 @@ class counterButton extends React.Component{
     
         render() {
          return(
-           <div>
-             <p>Task 2:38 </p>
+           <div className="form">
+             <h2> Counter </h2>
              <h1> {this.state.count}</h1>
              <button onClick={this.handleClick}>Change!</button>
-             <p> Unsure of ChildComponent count={this.state.count}/></p>
-    
+
            </div>
          )
         }

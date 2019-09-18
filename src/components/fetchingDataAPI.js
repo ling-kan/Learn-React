@@ -30,8 +30,8 @@ class fetchingDataAPI extends Component {
     const textBirth = this.state.loading ? "loading..." : this.state.character.birth_year
   
     return(
-      <div>
-
+      <div className = "form">
+        <h1> Fetching Data from API</h1>
         <p> Name: {textName} </p>
         <p> Birth: {textBirth} </p>
       </div> 
