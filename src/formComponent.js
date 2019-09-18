@@ -3,9 +3,6 @@ import React from "react"
 function FormComponent(props){
 
     return (
-
-        
-
       <form>
       <h2> Form Title </h2>
       <p>My Name:{props.data.firstName} {props.data.lastName}</p>

@@ -2,10 +2,11 @@ import React, {Component} from "react"
 import FormComponent from "./formComponent"
 
 class Form extends Component {
+
     constructor(){
       super()
-    ///everytime the value changes in the input box 
-    
+
+    ///everytime the value changes in the input box
      this.state = {
       firstname:"",
       lastname: "",
@@ -21,6 +22,9 @@ class Form extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  
+
+      
   handleChange(event){
     const {name, value, type,checked} = event.target
    // this.setState({
@@ -39,7 +43,6 @@ class Form extends Component {
         
        //   {[name]:checked}) : this.setState({[name]: value})
      //[event.target.name]: event.target.value
-  
   }
  render(){
      return(

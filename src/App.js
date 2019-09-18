@@ -8,6 +8,7 @@ import './App.css';
 import './style.css'; //todo
 import TodoItem from './todoItem'; //todo
 import todoData from './todoData'; //todo
+import DateTime from './DateTime'; //todo
 
 import Conditional from './Conditional';
 
@@ -255,22 +256,12 @@ import Conditional from './Conditional';
   
 //Forms - Container/Componenent Architecture 
 function App(){
-    const date = new Date();
-    const hours = date.getHours();
-    let timeofDay;
-  
-    if (hours < 12){
-      timeofDay = "morning"
-    }else if (hours >= 12 && hours < 17){
-      timeofDay = "afternoon"
-    }else {
-      timeofDay = "night"
-    }
-
 
   return(
-
+    <div>
+   <DateTime/>
    <Form/> 
+   </div>
   )
 }
 export default App;
