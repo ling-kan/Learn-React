@@ -7,7 +7,7 @@ function FormComponent(props){
         
 
       <form>
-      <h1> Form Title</h1>
+      <h2> Form Title </h2>
       <p>My Name:{props.data.firstName} {props.data.lastName}</p>
       <p>Age: {props.data.age}</p>
       <p>My Gender:{props.data.gender}</p>
