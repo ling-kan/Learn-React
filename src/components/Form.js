@@ -2,10 +2,11 @@ import React, {Component} from "react"
 import FormComponent from "./formComponent"
 
 class Form extends Component {
+
     constructor(){
       super()
-    ///everytime the value changes in the input box 
-    
+
+    ///everytime the value changes in the input box
      this.state = {
       firstname:"",
       lastname: "",
@@ -15,12 +16,20 @@ class Form extends Component {
       destination: "",
       isVegan: false, 
       isKosher: false,
-      isLactoseFree: false
-      
+      isLactoseFree: false,
+      isLoading: true
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
+  
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        isLoading: false
+      })
+    }, 1500)
+  }  
   handleChange(event){
     const {name, value, type,checked} = event.target
    // this.setState({
@@ -39,10 +48,10 @@ class Form extends Component {
         
        //   {[name]:checked}) : this.setState({[name]: value})
      //[event.target.name]: event.target.value
-  
   }
  render(){
      return(
+       
      <FormComponent
         handleChange={this.handleChange}
         data={this.state}/> 

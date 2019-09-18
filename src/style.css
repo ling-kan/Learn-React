@@ -1,19 +1,37 @@
-body{
+body {
     background-color: #d3d3d3;
 }
-.todo-list{
-    background-color:white;
-    margin:auto;
-    width:50%;
-    align-items:center;
-    padding:30px;
-}
-.todo-item{
+
+.todo-list {
+    background-color: white;
+    margin: auto;
+    width: 50%;
     align-items: center;
     padding: 30px;
-    width: 70%
-
 }
-input[type=checkbox]{
-    margin-right:10px;
+
+.todo-item {
+    align-items: center;
+}
+
+.form {
+    background-color: white;
+    margin: auto;
+    width: 70%;
+    align-items: center;
+
+    border: 1px solid #efefef;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+}
+
+.formText {
+    padding-left: 20px;
+    background-color: #e6f2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type=checkbox] {
+    margin-right: 10px;
 }
