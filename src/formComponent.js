@@ -3,36 +3,24 @@ import React from "react"
 function FormComponent(props){
 
     return (
-      <form>
-      <h2> Form Title </h2>
-      <p>My Name:{props.data.firstName} {props.data.lastName}</p>
-      <p>Age: {props.data.age}</p>
-      <p>My Gender:{props.data.gender}</p>
-      <p>My destination: {props.data.destination}</p>
-      <p>My dietary restrctions: <br/>
-          Vegan: {props.data.isVegan ? "Yes" : "No"}<br/>
-          Kosher: {props.data.isKosher ? "Yes" : "No"}<br/>
-          Lactose Free: {props.data.isLactoseFree ? "Yes" : "No"}<br/>
-        
-         </p>
+      <form className="form">
+      <h2> Form </h2>
         <input type="text" value={props.data.firstName} name="firstName" placeholder="First Name" onChange={props.handleChange}/>
         <br /> 
         <input type="text"  value={props.data.lastName} name="lastName" placeholder="Last Name" onChange={props.handleChange}/>
         <br />
         <input type="text"  value={props.data.age} name="age" placeholder="Age" onChange={props.handleChange}/>
         <br/>
-      <textarea value ={"Some default value"}/> 
-
+    {/* <textarea value ={"Some default value"}/> */}
       <label>
-      <input type="checkbox"
+     {/* <input type="checkbox"
              name="isFriendly"
              checked={props.data.isFriendly}
              onChange={props.handleChange}
-            /> Is Friendly?
+    /> Is Friendly?*/}
       </label>
 
       <label>
-         <br/>
       <input type="radio"
              name="gender"
              value="male"
@@ -85,7 +73,18 @@ function FormComponent(props){
             checked={props.data.isLactoseFree}
             />Lactose Free
       </label>
-      
+      <div className="formText">
+      <p>My Name:{props.data.firstName} {props.data.lastName}</p>
+      <p>Age: {props.data.age}</p>
+      <p>My Gender:{props.data.gender}</p>
+      <p>My destination: {props.data.destination}</p>
+      <p>My dietary restrctions: <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp; Vegan: {props.data.isVegan ? "Yes" : "No"}<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp; Kosher: {props.data.isKosher ? "Yes" : "No"}<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp; Lactose Free: {props.data.isLactoseFree ? "Yes" : "No"}<br/>
+         </p>
+         </div> 
+
       </form>
     )
   }
