@@ -77,9 +77,9 @@ function FormComponent(props){
        {props.isLoading === true ? <h1>Loading</h1> :
 
       <div className="formText">
-      <p>My Name:{props.data.firstName} {props.data.lastName}</p>
+      <p>My Name:  {props.data.firstName} {props.data.lastName}</p>
       <p>Age: {props.data.age}</p>
-      <p>My Gender:{props.data.gender}</p>
+      <p>My Gender: {props.data.gender}</p>
       <p>My destination: {props.data.destination}</p>
       <p>My dietary restrctions: <br/>
       &nbsp;&nbsp;&nbsp;&nbsp; Vegan: {props.data.isVegan ? "Yes" : "No"}<br/>

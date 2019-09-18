@@ -1,7 +1,7 @@
 
 import TodoItem from './todoItem'; //todo
 import todoData from './todoData'; //todo
-import React, {Component} from "react"
+import React from "react"
 
 class todoMain extends React.Component {
   constructor(){
@@ -29,11 +29,12 @@ class todoMain extends React.Component {
   }
   
   render(){
-    const todoItems = todoData.map(item => <TodoItem key={item.id} item={item}/>)
+    const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
 
     return(
     
       <div className = "form"> 
+      <h2> To do List</h2>
        {todoItems}
       </div>
     )

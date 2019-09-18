@@ -1,4 +1,4 @@
-import React, {Component} from "react" //conditional - can only use one type of react
+import React from "react" //conditional - can only use one type of react
 
 
 //Conditional Rendering - Log in and log out 

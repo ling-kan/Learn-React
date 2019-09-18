@@ -26,7 +26,6 @@ function App(){
     <FetchinDataAPI/>
     <CounterButton/>
     <TodoMain/>
-    }
    </div>
   )
 }
