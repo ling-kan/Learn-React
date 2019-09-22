@@ -1,6 +1,7 @@
 import React from "react"
 
 class counterButton extends React.Component{
+  
   constructor(){
     super()
      this.state = {count: 0}

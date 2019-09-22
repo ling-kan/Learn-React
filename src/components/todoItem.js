@@ -1,5 +1,3 @@
-
-import TodoMain from './todoMain';
 import React from 'react';
 
 function todoItem(props) {
