@@ -22,6 +22,8 @@ import ReduxToDo from "./reduxSection"; //App with componenets
 import reducer from './reduxSection/reducer'
 
 import HookCounter from "./components/hookCounter"
+import HookForm from "./components/hookForm"
+
 
 const store = createStore(reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && 
@@ -45,6 +47,7 @@ function App(){
         <ReduxToDo/>
     </Provider>
     <HookCounter/>
+    <HookForm/>
    </div>
   )
 }
