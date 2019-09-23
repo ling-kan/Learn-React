@@ -8,6 +8,7 @@ class CounterRedux extends React.Component {
     
       return(
             <div className = "form">
+               <h1> Redux Counter</h1>
                 <div>Counter : {counter}</div>
                 <div>
                <button onClick = {increase}>increase BY 1</button>

@@ -3,9 +3,18 @@ import React from "react"
 function FormComponent(props){
 
     return (
-      
       <form className="form">
-      <h2> Form </h2>
+      <h1> Form Title</h1>
+      <p>My Name:{props.data.firstName} {props.data.lastName}</p>
+      <p>Age: {props.data.age}</p>
+      <p>My Gender:{props.data.gender}</p>
+      <p>My destination: {props.data.destination}</p>
+      <p>My dietary restrctions: <br/>
+          Vegan: {props.data.isVegan ? "Yes" : "No"}<br/>
+          Kosher: {props.data.isKosher ? "Yes" : "No"}<br/>
+          Lactose Free: {props.data.isLactoseFree ? "Yes" : "No"}<br/>
+        
+         </p>
         <input type="text" value={props.data.firstName} name="firstName" placeholder="First Name" onChange={props.handleChange}/>
         <br /> 
         <input type="text"  value={props.data.lastName} name="lastName" placeholder="Last Name" onChange={props.handleChange}/>

@@ -16,15 +16,12 @@ import TodoMain from "./components/todoMain";
 import Clock from "./components/clock";
 import LifeCycle from "./components/lifeCycle";
 
-//import ReduxCounter from "./components/reduxCounter";
-//import ReduxToDo from "./reduxSection/reduxToDo.js";
-//import Store from "./reduxSection/store.js";
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import ReduxToDo from "./reduxSection"; //App with componenets
 import reducer from './reduxSection/reducer'
 
-
+import HookCounter from "./components/hookCounter"
 
 const store = createStore(reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && 
@@ -44,18 +41,10 @@ function App(){
     <CounterButton/>
     <TodoMain/>
     <Clock />
-    {/* <ReduxCounter/> */}
-
-    {/* Providing Store  - Redux  */}
-    {/* Make the store avalible to the app  */}
     <Provider store={store}>
         <ReduxToDo/>
     </Provider>
-    
-
-
-   {/* //  <Counter store={store}/>  */}
-    {/* <LifeCycle/> */}
+    <HookCounter/>
    </div>
   )
 }
